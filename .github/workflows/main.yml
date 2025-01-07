@@ -46,5 +46,6 @@ jobs:
         run: ssh-keyscan -H 13.60.172.24 >> ~/.ssh/known_hosts
       - name: Deploy to Server
         run: |
-          ssh user@13.60.172.24 "docker pull taruns2501/netflixdemo:latest && docker-compose up -d"
+          ssh -o StrictHostKeyChecking=no user@13.60.172.24 "docker pull taruns2501/netflixdemo:latest && docker-compose up -d"
+
 
