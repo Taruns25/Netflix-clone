@@ -44,5 +44,5 @@ jobs:
     steps:
       - name: Deploy to Server
         run: |
-          ssh user@server "docker pull taruns2501/netflixdemo:latest && docker-compose up -d"
+          ssh user@13.60.172.24 "docker pull taruns2501/netflixdemo:latest && docker-compose up -d"
 
