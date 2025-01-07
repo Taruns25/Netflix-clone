@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      args:
+        - TMDB_V3_API_KEY=f3709a71803ec3f4047f279972929ce6
+    ports:
+      - "8080:80"
+    environment:
+      VITE_APP_TMDB_V3_API_KEY: f3709a71803ec3f4047f279972929ce6
+      VITE_APP_API_ENDPOINT_URL: https://api.themoviedb.org/3
+    container_name: my-app
